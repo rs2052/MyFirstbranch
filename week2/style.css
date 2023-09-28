@@ -13,8 +13,11 @@ header {
     text-align: center;
     padding: 20px;
     
+    
 }
-
+{
+postion :sticky;
+}
 .headeraH1 {
     margin: 0;
 }
@@ -23,11 +26,7 @@ header {
     width: 100%;
     overflow: hidden;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
+
 .banner img {
     width: 100%;
     height: auto;
