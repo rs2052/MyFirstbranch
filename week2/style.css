@@ -36,7 +36,7 @@ header {
 /* Navigation Styles */
 nav {
     position: sticky;
-    top: 0;
+    top: 0px;
 }
 nav ul {
     background-color: #333;
