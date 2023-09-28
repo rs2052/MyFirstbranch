@@ -4,7 +4,7 @@ body {
     padding: 0;
   
     color: #505050;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   
   /* Header Styles */
@@ -12,6 +12,7 @@ body {
     background-color: #282689;
     color: #fff;
     text-align: center;
+    font-style: Roboto;
     padding: 20px;
   }
   
@@ -200,8 +201,8 @@ body {
     margin: 10px 0 0;
   }
   
-  .highlight {
-    color: green;
+  .highlightLists {
+    color: aqua;
     background-color: black;
     border-radius: 10px;
     padding: 10px;
