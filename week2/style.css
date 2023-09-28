@@ -41,6 +41,8 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 20px;
+    position: sticky;
+    top: 50px;
     
 }
 
@@ -54,8 +56,6 @@ nav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    position: sticky;
-    top: 50px;
     transition: background-color 0.3s;  /* Smooth transition for hover effect */
 }
 
