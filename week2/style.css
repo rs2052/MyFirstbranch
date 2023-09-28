@@ -52,7 +52,7 @@ nav li {
     display: inline-block;
 }
 
-nav a {
+nav a.active {
     display: block;
     color: #fff;
     text-align: center;
@@ -194,4 +194,11 @@ footer a:hover {
 
 footer p {
     margin: 10px 0 0;
+}
+.Highlight {
+    color: #0056b3;
+    background-color: #fff;
+    border-radius: 3px;
+    font-weight: bold
+
 }
