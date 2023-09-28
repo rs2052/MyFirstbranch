@@ -29,7 +29,11 @@ header {
     display: block;
 }
 
-
+.header-fixed-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
 /* Navigation Styles */
 nav ul {
     background-color: #333;
