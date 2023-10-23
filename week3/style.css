@@ -227,6 +227,10 @@ footer p {
   display: none;
 }
 
+.slider img{
+    width:100%
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;

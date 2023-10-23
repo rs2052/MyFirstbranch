@@ -4,7 +4,7 @@ function plusSlides(n) {
     show(slideN += n);
 }
 function currentPic(n) {
-    show(slideN = i);
+    show(slideN = n);
 }
 
 function show(n) {
@@ -19,7 +19,7 @@ function show(n) {
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
  }
-    slides[slideN-1].style.display = "Blocked";
+    slides[slideN-1].style.display = "block";
     dots[slideN-1].className += "Available";
 
 }
