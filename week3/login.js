@@ -1,82 +1,69 @@
-
 const form = document.getElementById("form");
+
 form.addEventListener("submit", function (event) {
+    let valid = true;
+    const emptyFields = [];
 
-   let valid = true;
-   const emptyFields = [];
-   const username = document.getElementById("LOGIN ID");
-   const usernameError = document.getElementById("ID ERROR");
+    // Username
+    const username = document.getElementById("lL"); // Assuming "lL" is the correct ID
+    const usernameError = document.getElementById("IDError");
 
-   if (username.value.trim() === "") {
+    if (username.value.trim() === "") {
+        emptyFields.push("Login ID");
+        usernameError.textContent = "Login ID Missing";
+        username.classList.remove("VALID");
+        valid = false;
+    } else {
+        usernameError.textContent = "";
+        username.classList.add("VALID");
+    }
 
-       emptyFields.push("LOGIN ID");
-       usernameError.textContent = "LOGIN ID MISSING";
-       username.classList.remove("VALID ID");
-       valid = false;
+    // Email
+    const email = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-} else {
-  
-   usernameError.textContent = "";
-   username.classList.add("VALIC ID");
+    if (!emailPattern.test(email.value)) {
+        emailError.textContent = "Incorrect Email ID";
+        email.classList.remove("VALID");
+        valid = false;
+    } else {
+        emailError.textContent = "";
+        email.classList.add("VALID");
+    }
 
-}
+    // Password
+    const password = document.getElementById("passcode"); // Assuming "passcode" is the correct ID
+    const passwordError = document.getElementById("passcodeError");
 
+    if (password.value.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters";
+        password.classList.remove("VALID");
+        valid = false;
+    } else {
+        passwordError.textContent = "";
+        password.classList.add("VALID");
+    }
 
-const email = document.getElementById("EMAIL");
-const emailError = document.getElementById("EMAIL VERIFICATION FAILED");
-const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    // Confirm Password
+    const confirmPassword = document.getElementById("confirmPasscode"); // Assuming "confirmPasscode" is the correct ID
+    const confirmPasswordError = document.getElementById("confirmPasscodeError");
 
-if (!emailPattern.test(email.value)) {
-  
-   emailError.textContent = "INCORRECT EMAIL ID";
-   email.classList.remove("VALID");
-   valid = false;
+    if (confirmPassword.value !== password.value) {
+        confirmPasswordError.textContent = "Passwords do not match";
+        confirmPassword.classList.remove("VALID");
+        valid = false;
+    } else {
+        confirmPasswordError.textContent = "";
+        confirmPassword.classList.add("VALID");
+    }
 
-} else {
-  
-   emailError.textContent = "";
-   email.classList.add("VALID");
+    if (emptyFields.length > 0) {
+        alert("Oops, something is missing: " + emptyFields.join(", "));
+        valid = false;
+    }
 
-}
-
-const password = document.getElementById("PASSCODE");
-const passwordError = document.getElementById("PASSCODE");
-
-if (password.value.length < 8) {
-   passwordError.textContent = "PASSWORD MUST BE ATLEAST 8 CHARECTERS";
-   password.classList.remove("VALID");
-   valid = false;
-
-} else {
-
-   passwordError.textContent = "";
-   password.classList.add("VALID");
-
-}
-
-
-const confirmPassword = document.getElementById("confirmPassword");
-
-const confirmPasswordError = document.getElementById("confirmPasswordError");
-
-if (confirmPassword.value !== password.value) {
-   confirmPasswordError.textContent = "Passwords do not match";
-   confirmPassword.classList.remove("VALID");
-   valid = false;
-
-} else {
-
-   confirmPasswordError.textContent = "";
-   confirmPassword.classList.add("VALID");
-
-}
-
-if (emptyFields.length > 0) {
-   alert("Ooops Somethingn is missing: " + emptyFields.join(", "));
-   valid = false;
-
-}
-
-if (!valid) {
-   event.preventDefault(); 
-}});
+    if (!valid) {
+        event.preventDefault();
+    }
+});
