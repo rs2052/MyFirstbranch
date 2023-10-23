@@ -130,6 +130,14 @@
           let i;
           let slides = document.getElementsByClassName("slider");
           let dots = document.getElementsByClassName("bullet");
+          if (n > slides.length) {
+                  slideN = 1;
+          }
+
+          if (n < 1) {
+           slideN = slides.length;
+          }
+
            if (n > slides.length) {slideN = 1}
               if (n < 1) {slideN = slides.length}
           for (i = 0; i < slides.length; i++) {
