@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign in - Dubai Finance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+   
+  </head>
+  <body>
+    
+    <header>
+      <h1 class="headeraH1">Dubai Finance | We Are Rich</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li> <a href="login.html" class="highlightLists">Login</a> </li>
+      </ul>
+    </nav>
+    
+    <main>
+      <form id="form" action="#" method="post">
+        <h1>Sign In</h1>
+
+        <div class="input-control">
+          <label for="loginid">Login ID:</label>
+          <input type="text" id="lL" name="loginid" placeholder="Enter your Login-ID">
+          <div class="error" id="IDError"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter Email">
+          <div class="error" id="emailError"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="passcode">Passcode:</label>
+          <input type="password" id="passcode" name="passcode" placeholder="Enter your password">
+          <div class="error" id="passcodeError"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="confirmPasscode">Confirm Passcode:</label>
+          <input type="password" id="confirmPasscode" name="confirmPasscode" placeholder="Confirm your passcode">
+          <div class="error" id="confirmPasscodeError"></div>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    
+    <footer>
+      <ul>
+        <li><a href="https://www.facebook.com/">Facebook</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+      </ul>
+      <p>
+        &copy; 2024 Dubai Finance | We Are Rich. All rights reserved.
+      </p>
+    </footer>
+    
+    <script src="loginScript.js"></script>
+  </body>
+</html>
+
